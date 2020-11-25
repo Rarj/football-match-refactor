@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/InFootball.iml" filepath="$PROJECT_DIR$/.idea/modules/InFootball.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/app/InFootball.app.iml" filepath="$PROJECT_DIR$/.idea/modules/app/InFootball.app.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/data/InFootball.data.iml" filepath="$PROJECT_DIR$/.idea/modules/data/InFootball.data.iml" />
+    </modules>
+  </component>
+</project>
