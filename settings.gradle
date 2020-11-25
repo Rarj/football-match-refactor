@@ -1,4 +1,4 @@
-include ':features:dashboard'
-include ':data'
 include ':app'
+include ':data'
+include ':features:dashboard'
 rootProject.name = "InFootball"
