@@ -5,6 +5,7 @@ import androidx.lifecycle.ViewModelProvider
 import dagger.Binds
 import dagger.Module
 import dagger.multibindings.IntoMap
+import rio.arj.dashboard.DashboardViewModel
 import rio.arj.infootball.ui.mainpage.MainViewModel
 
 @Module
@@ -15,7 +16,7 @@ abstract class ViewModelModule {
 
   @Binds
   @IntoMap
-  @ViewModelKey(MainViewModel::class)
-  abstract fun bindsMainViewModel(mainViewModel: MainViewModel): ViewModel
+  @ViewModelKey(DashboardViewModel::class)
+  abstract fun bindsDashboardViewModel(dashboardViewModel: DashboardViewModel): ViewModel
 
 }
