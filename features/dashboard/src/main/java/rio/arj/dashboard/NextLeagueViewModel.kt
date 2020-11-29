@@ -1,21 +1,23 @@
 package rio.arj.dashboard
 
+import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import kotlinx.coroutines.launch
-import rio.arj.infootball.data.repo.nextleague.MainRepository
-import rio.arj.infootball.data.repo.nextleague.model.NextLeagueModel
+import rio.arj.infootball.data.repository.nextleague.NextLeagueRepository
+import rio.arj.infootball.data.repository.nextleague.model.NextLeagueModel
 import javax.inject.Inject
 
-class DashboardViewModel @Inject constructor(private val repository: MainRepository) : ViewModel() {
+class NextLeagueViewModel @Inject constructor(private val repository: NextLeagueRepository) :
+  ViewModel() {
 
   val resultMatchFootball: NextLeagueModel?
     get() = getFootball()
 
-  private var isDataLoaded = MutableLiveData(false)
+  private var isDataLoaded = MutableLiveData<Boolean>()
 
-  fun getIsDataLoaded() = isDataLoaded
+  fun getIsDataLoaded() : LiveData<Boolean> = isDataLoaded
 
   init {
     getFootball()

@@ -1,4 +1,4 @@
-package rio.arj.infootball.di.module
+package rio.arj.core
 
 import androidx.lifecycle.ViewModel
 import dagger.MapKey

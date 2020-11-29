@@ -1,4 +1,4 @@
-package rio.arj.infootball.data.repo.nextleague.model
+package rio.arj.infootball.data.repository.nextleague.model
 
 import com.google.gson.annotations.SerializedName
 
