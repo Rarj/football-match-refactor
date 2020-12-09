@@ -8,5 +8,11 @@ data class Events(
   @SerializedName("strEvent")
   val nameEvent: String,
   @SerializedName("dateEvent")
-  val dateEvent: String
+  val dateEvent: String,
+  @SerializedName("strThumb")
+  val imageThumbnail: String,
+  @SerializedName("strLeague")
+  val leagueName: String,
+  @SerializedName("strVenue")
+  val venueName: String,
 )

@@ -12,19 +12,18 @@ import javax.inject.Inject
 class NextLeagueViewModel @Inject constructor(private val repository: NextLeagueRepository) :
   ViewModel() {
 
+  private var result: NextLeagueModel? = null
   val resultMatchFootball: NextLeagueModel?
-    get() = getFootball()
+    get() = result
 
   private var isDataLoaded = MutableLiveData<Boolean>()
-
-  fun getIsDataLoaded() : LiveData<Boolean> = isDataLoaded
+  fun getIsDataLoaded(): LiveData<Boolean> = isDataLoaded
 
   init {
     getFootball()
   }
 
   private fun getFootball(): NextLeagueModel? {
-    var result: NextLeagueModel? = null
     viewModelScope.launch {
       result = repository.loadMainFootballMatch()
       isDataLoaded.value = true
