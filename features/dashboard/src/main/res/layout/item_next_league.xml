@@ -42,7 +42,7 @@
       android:layout_width="0dp"
       android:layout_height="wrap_content"
       android:gravity="center"
-      android:text="@{eventModel.dateEvent}"
+      android:text="@{eventModel.dateFormatted}"
       android:textAppearance="@style/TextAppearance.AppCompat.Medium"
       app:layout_constraintEnd_toEndOf="@id/image_thumbnail"
       app:layout_constraintStart_toStartOf="@id/image_thumbnail"
