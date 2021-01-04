@@ -21,8 +21,8 @@ class NextLeagueActivity : AppCompatActivity() {
 
   private val nextLeagueAdapter by lazy {
     NextLeagueAdapter(
-      {
-
+      { model ->
+        Toast.makeText(this, model.nameEvent, Toast.LENGTH_SHORT).show()
       },
       mutableListOf()
     )
