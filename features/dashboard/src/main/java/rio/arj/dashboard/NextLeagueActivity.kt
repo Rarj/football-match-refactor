@@ -1,6 +1,7 @@
 package rio.arj.dashboard
 
 import android.os.Bundle
+import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import androidx.databinding.DataBindingUtil
 import androidx.lifecycle.ViewModelProvider
@@ -19,7 +20,12 @@ class NextLeagueActivity : AppCompatActivity() {
   private lateinit var binding: ActivityNextLeagueBinding
 
   private val nextLeagueAdapter by lazy {
-    NextLeagueAdapter(mutableListOf())
+    NextLeagueAdapter(
+      {
+
+      },
+      mutableListOf()
+    )
   }
 
   override fun onCreate(savedInstanceState: Bundle?) {

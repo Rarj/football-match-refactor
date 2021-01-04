@@ -7,6 +7,7 @@ import rio.arj.dashboard.databinding.ItemNextLeagueBinding
 import rio.arj.infootball.data.repository.nextleague.model.Events
 
 class NextLeagueAdapter(
+  private val listener: (position: Events) -> Unit,
   private val listLeague: MutableList<Events>
 ) : RecyclerView.Adapter<NextLeagueViewHolder>() {
 
@@ -17,7 +18,7 @@ class NextLeagueAdapter(
   }
 
   override fun onBindViewHolder(holder: NextLeagueViewHolder, position: Int) {
-    holder.bind(listLeague[position])
+    holder.bind(listener, listLeague[position])
   }
 
   override fun getItemCount() = listLeague.size
