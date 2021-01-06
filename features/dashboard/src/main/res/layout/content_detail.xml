@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+  xmlns:app="http://schemas.android.com/apk/res-auto"
+  xmlns:tools="http://schemas.android.com/tools"
+  android:layout_width="match_parent"
+  android:layout_height="match_parent"
+  app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+  <androidx.constraintlayout.widget.ConstraintLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <androidx.appcompat.widget.AppCompatTextView
+      android:id="@+id/text_event_name"
+      android:layout_width="0dp"
+      android:layout_height="wrap_content"
+      android:layout_marginStart="@dimen/container_margin"
+      android:layout_marginTop="@dimen/component_margin"
+      android:layout_marginEnd="@dimen/container_margin"
+      android:gravity="center"
+      android:textAppearance="@style/TextAppearance.AppCompat.Large"
+      android:textColor="@android:color/holo_blue_dark"
+      app:layout_constraintEnd_toEndOf="parent"
+      app:layout_constraintStart_toStartOf="parent"
+      app:layout_constraintTop_toTopOf="parent"
+      tools:text="Arsenal VS Manchester United" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+      android:id="@+id/text_score_home"
+      android:layout_width="0dp"
+      android:layout_height="wrap_content"
+      android:gravity="center_horizontal"
+      android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+      android:textStyle="bold"
+      app:layout_constraintEnd_toStartOf="@id/text_score_caption"
+      app:layout_constraintStart_toStartOf="parent"
+      app:layout_constraintTop_toTopOf="@id/text_score_caption"
+      android:text="12" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+      android:id="@+id/text_score_caption"
+      android:layout_width="0dp"
+      android:layout_height="wrap_content"
+      android:layout_marginTop="@dimen/container_margin"
+      android:gravity="center_horizontal"
+      android:text="Score"
+      android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+      android:textColor="@android:color/darker_gray"
+      app:layout_constraintEnd_toStartOf="@id/text_score_away"
+      app:layout_constraintStart_toEndOf="@id/text_score_home"
+      app:layout_constraintTop_toBottomOf="@id/text_event_name" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+      android:id="@+id/text_score_away"
+      android:layout_width="0dp"
+      android:layout_height="wrap_content"
+      android:gravity="center_horizontal"
+      android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+      android:textStyle="bold"
+      app:layout_constraintEnd_toEndOf="parent"
+      app:layout_constraintStart_toEndOf="@id/text_score_caption"
+      app:layout_constraintTop_toTopOf="@id/text_score_caption"
+      android:text="12" />
+
+  </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.core.widget.NestedScrollView>
