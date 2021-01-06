@@ -6,7 +6,6 @@
     <activity android:name=".NextLeagueActivity" />
     <activity
       android:name="rio.arj.detail.DetailActivity"
-      android:label="@string/title_activity_detail"
       android:theme="@style/DefaultTheme" />
   </application>
 
