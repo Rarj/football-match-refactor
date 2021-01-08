@@ -141,6 +141,43 @@
         app:layout_constraintStart_toEndOf="@id/text_formation_caption"
         app:layout_constraintTop_toTopOf="@id/text_formation_caption" />
 
+      <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/text_shots_home"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal"
+        android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+        android:textColor="@android:color/black"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toStartOf="@id/text_shots_caption"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@id/text_shots_caption" />
+
+      <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/text_shots_caption"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/container_margin"
+        android:gravity="center_horizontal"
+        android:text="Shots"
+        android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+        android:textColor="@android:color/darker_gray"
+        app:layout_constraintEnd_toStartOf="@id/text_shots_away"
+        app:layout_constraintStart_toEndOf="@id/text_shots_home"
+        app:layout_constraintTop_toBottomOf="@id/text_formation_caption" />
+
+      <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/text_shots_away"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal"
+        android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+        android:textColor="@android:color/black"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/text_shots_caption"
+        app:layout_constraintTop_toTopOf="@id/text_shots_caption" />
+
     </androidx.constraintlayout.widget.ConstraintLayout>
 
   </androidx.core.widget.NestedScrollView>
