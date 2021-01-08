@@ -19,8 +19,16 @@ data class Events(
   val leagueName: String,
   @SerializedName("strVenue")
   val venueName: String,
+  @SerializedName("intHomeScore")
+  val scoreHome: Int?,
+  @SerializedName("intAwayScore")
+  val scoreAway: Int?,
 ) : Parcelable {
   fun getDateFormatted(): String {
     return DateUtils().convertSimpleDateFormat(dateEvent)
   }
+
+  fun getScoreHomes() = scoreHome?.toString() ?: "-"
+
+  fun getScoreAways() = scoreAway?.toString() ?: "-"
 }
