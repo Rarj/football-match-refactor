@@ -1,13 +1,19 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
-  xmlns:app="http://schemas.android.com/apk/res-auto"
-  xmlns:tools="http://schemas.android.com/tools"
-  android:id="@+id/coordinator"
-  android:layout_width="match_parent"
-  android:layout_height="match_parent"
-  android:background="@android:color/white"
-  android:fitsSystemWindows="true"
-  tools:context="rio.arj.detail.DetailActivity">
+<layout>
+  <data>
+    <variable
+      name="eventModel"
+      type="rio.arj.infootball.data.repository.nextleague.model.Events" />
+  </data>
+  <androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/coordinator"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/white"
+    android:fitsSystemWindows="true"
+    tools:context="rio.arj.detail.DetailActivity">
 
     <com.google.android.material.appbar.AppBarLayout
       android:id="@+id/app_bar"
@@ -33,19 +39,24 @@
           android:layout_width="match_parent"
           android:layout_height="180dp"
           android:scaleType="fitXY"
+          app:imageUrl="@{eventModel.imageThumbnail}"
           tools:src="@tools:sample/backgrounds/scenic" />
-        <!--        app:imageUrl="@{eventModel.imageThumbnail}"-->
 
         <androidx.appcompat.widget.Toolbar
           android:id="@+id/toolbar"
           android:layout_width="match_parent"
           android:layout_height="?attr/actionBarSize"
           app:layout_collapseMode="pin"
+          app:navigationIcon="@drawable/ic_arrow_back"
           app:popupTheme="@style/Theme.InFootball.PopupOverlay" />
 
       </com.google.android.material.appbar.CollapsingToolbarLayout>
     </com.google.android.material.appbar.AppBarLayout>
 
-  r<include layout="@layout/content_detail"/>
+    <include
+      layout="@layout/content_detail"
+      app:eventModel="@{eventModel}" />
 
-</androidx.coordinatorlayout.widget.CoordinatorLayout>
+  </androidx.coordinatorlayout.widget.CoordinatorLayout>
+
+</layout>
