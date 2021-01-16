@@ -39,9 +39,15 @@ data class Events(
   val formationHome: String?,
   @SerializedName("strAwayFormation")
   val formationAway: String?,
+  @SerializedName("strTime")
+  val timeEvent: String?,
 ) : Parcelable {
   fun getDateFormatted(): String {
     return DateUtils().convertSimpleDateFormat(dateEvent)
+  }
+
+  fun getTimeEvents(): String {
+    return DateUtils().convertSimpleTimeFormat(timeEvent)
   }
 
   fun getScoreHomes() = scoreHome?.toString() ?: "-"
