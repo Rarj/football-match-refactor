@@ -35,4 +35,11 @@ class DateUtilsTest {
     val convertDate = DateUtils().convertSimpleDateFormat(date)
     assertEquals("", convertDate)
   }
+
+  @Test
+  fun convertSimpleTimeFormat() {
+    val time = "10:10:00"
+    val convertTime = DateUtils().convertSimpleTimeFormat(time)
+    assertEquals("10:10 AM", convertTime)
+  }
 }

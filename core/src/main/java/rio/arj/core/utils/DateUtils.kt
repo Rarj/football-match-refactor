@@ -20,4 +20,15 @@ class DateUtils {
     return ""
   }
 
+  fun convertSimpleTimeFormat(timeString: String?): String {
+    val isDateValid = !timeString.isNullOrEmpty() && isNotContainsLetter(timeString)
+    if (isDateValid) {
+      val formatPattern = SimpleDateFormat("hh:mm:ss", Locale("ID"))
+      val dateFormatter = SimpleDateFormat("hh:mm a", Locale("ID"))
+      val date = formatPattern.parse(timeString.toString()) ?: Date()
+      return dateFormatter.format(date)
+    }
+    return ""
+  }
+
 }
