@@ -43,11 +43,8 @@ data class Events(
   val timeEvent: String?,
 ) : Parcelable {
   fun getDateFormatted(): String {
-    return DateUtils().convertSimpleDateFormat(dateEvent)
-  }
-
-  fun getTimeEvents(): String {
-    return DateUtils().convertSimpleTimeFormat(timeEvent)
+    return "${DateUtils().convertSimpleDateFormat(dateEvent)}, " +
+          " ${DateUtils().convertSimpleTimeFormat(timeEvent)}"
   }
 
   fun getScoreHomes() = scoreHome?.toString() ?: "-"
