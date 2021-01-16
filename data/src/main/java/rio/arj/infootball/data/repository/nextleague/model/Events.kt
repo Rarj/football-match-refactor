@@ -71,7 +71,13 @@ data class Events(
     val yellowCardString = yellowCardsArray?.joinToString("(YELLOW), ") ?: "-"
     val redCardString = redCardsArray?.joinToString("(RED), ") ?: "-"
 
-    return yellowCardString + redCardString
+    val result = yellowCardString + redCardString
+
+    return if (result == "--") {
+      "-"
+    } else {
+      result
+    }
   }
 
   fun getFormationAways() = formationAway ?: "-"
