@@ -7,16 +7,18 @@
       type="rio.arj.infootball.data.repository.nextleague.model.Events" />
   </data>
   <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/container_root"
     android:layout_width="match_parent"
-    android:layout_height="wrap_content">
+    android:layout_height="wrap_content"
+    android:layout_marginStart="@dimen/component_margin"
+    android:layout_marginTop="@dimen/component_margin"
+    android:layout_marginEnd="@dimen/component_margin"
+    android:background="@android:color/white">
 
     <androidx.appcompat.widget.AppCompatImageView
       android:id="@+id/image_thumbnail"
       android:layout_width="0dp"
       android:layout_height="200dp"
-      android:layout_marginStart="8dp"
-      android:layout_marginTop="8dp"
-      android:layout_marginEnd="8dp"
       android:scaleType="fitXY"
       app:imageUrl="@{eventModel.imageThumbnail}"
       app:layout_constraintEnd_toEndOf="parent"

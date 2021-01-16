@@ -1,16 +1,13 @@
 package rio.arj.dashboard
 
-import android.content.Intent
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import androidx.databinding.DataBindingUtil
 import androidx.lifecycle.ViewModelProvider
 import androidx.recyclerview.widget.LinearLayoutManager
-import rio.arj.core.Constant.INTENT_KEY
 import rio.arj.dashboard.databinding.ActivityNextLeagueBinding
 import rio.arj.dashboard.di.DaggerDashboardComponent
 import rio.arj.dashboard.di.DashboardModule
-import rio.arj.detail.DetailActivity
 import javax.inject.Inject
 
 class NextLeagueActivity : AppCompatActivity() {
@@ -22,14 +19,7 @@ class NextLeagueActivity : AppCompatActivity() {
   private lateinit var binding: ActivityNextLeagueBinding
 
   private val nextLeagueAdapter by lazy {
-    NextLeagueAdapter(
-      { model ->
-        val intent = Intent(this, DetailActivity::class.java)
-        intent.putExtra(INTENT_KEY, model)
-        startActivity(intent)
-      },
-      mutableListOf()
-    )
+    NextLeagueAdapter(mutableListOf())
   }
 
   override fun onCreate(savedInstanceState: Bundle?) {
